@@ -288,7 +288,7 @@ svc=resource/get_zone_data&params={"itemId":<long>,
 		});
 	}
 
-
+//Бла бла бла
 
 	/**
 	 * Create/Update/Delete authorization token
