@@ -73,6 +73,8 @@ public class Main implements Runnable {
         session.SearchGeozon("5b5123165acf4d486bb53e51f1d518100B8AB23328FF09EB913C63F98D61EE62FE79684A ", new ResponseHandler(){
             @Override
             public void onSuccess(String response) {
+
+
                 super.onSuccess(response);
                 // login succeed
                 System.out.println(String.format("Попытка не пытка"));
@@ -82,8 +84,10 @@ public class Main implements Runnable {
                 logout();
             }
 
+
             @Override
             public void onFailure(int errorCode, Throwable throwableError) {
+
                 super.onFailure(errorCode, throwableError);
                 // login failed, print error
                 System.out.println(Errors.getErrorText(errorCode));
