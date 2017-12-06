@@ -33,7 +33,7 @@ public class Main implements Runnable {
 
                 //searchUnits();
                // CreateRout();
-                 SearchGeozon();
+               //  SearchGeozon();
             }
 
             @Override
@@ -161,6 +161,12 @@ public class Main implements Runnable {
     public void run() {
         // get instance of current Session
         session=Session.getInstance();
+        Test hh = new Test();
+        hh.test(1);
+        hh.test(2);
+        hh.test(3);
+        hh.test(4);
+
         login();
     }
 

@@ -222,6 +222,7 @@ public class Session extends EventProvider {
 		if (service!=null)
 			params.addProperty("checkService", service);
 		httpClient.remoteCall("token/login", params, new ResponseHandler(callback) {
+			int hopk = 1;
 			@Override
 			public void onSuccess(String response) {
 				onLoginResult(response, this.getCallback());
@@ -275,16 +276,23 @@ svc=resource/get_zone_data&params={"itemId":<long>,
 		params.addProperty("flags", "[1]");
 		//{"color":<uint>,"descr":<text>,"units":[<long>]}
 
-         callback.onSuccess("dfgdfg");
+        // callback.onSuccess("dfgdfg");
 
 
 		httpClient.remoteCall("resource/get_zone_data", params, new ResponseHandler(callback) {
-			@Override
+		 int h=0;
+
+
+		 int hop = 1;
+
+
+				@Override
 			public void onSuccess(String response) {
 				//onLoginResult(response, this.getCallback());
 				callback.onSuccess(response);
 			}
-		});
+			int g=3;
+		});;
 	}
 
 //Бла бла бла
