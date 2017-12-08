@@ -222,7 +222,7 @@ public class Session extends EventProvider {
 		if (service!=null)
 			params.addProperty("checkService", service);
 		httpClient.remoteCall("token/login", params, new ResponseHandler(callback) {
-			int hopk = 1;
+
 			@Override
 			public void onSuccess(String response) {
 				onLoginResult(response, this.getCallback());
@@ -259,9 +259,6 @@ public class Session extends EventProvider {
 		});
 	}
 
-	public void SearchGeozon (String token, ResponseHandler callback){
-		SearchGeozon(token, null, callback);
-	}
 
 	/*
 svc=resource/get_zone_data&params={"itemId":<long>,
@@ -269,7 +266,7 @@ svc=resource/get_zone_data&params={"itemId":<long>,
 				   "flags":<uint>}
  */
 
-	public void SearchGeozon (String token, String service, ResponseHandler callback) {
+	public void SearchGeozon (ResponseHandler callback) {
 
 		JsonObject params=new JsonObject();
 		params.addProperty("itemId", "15976638");
@@ -278,12 +275,7 @@ svc=resource/get_zone_data&params={"itemId":<long>,
 
         // callback.onSuccess("dfgdfg");
 
-
 		httpClient.remoteCall("resource/get_zone_data", params, new ResponseHandler(callback) {
-		 int h=0;
-
-
-		 int hop = 1;
 
 
 				@Override
@@ -291,7 +283,7 @@ svc=resource/get_zone_data&params={"itemId":<long>,
 				//onLoginResult(response, this.getCallback());
 				callback.onSuccess(response);
 			}
-			int g=3;
+
 		});;
 	}
 
