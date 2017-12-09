@@ -33,7 +33,7 @@ public class Main implements Runnable {
 
                 //searchUnits();
                // CreateRout();
-               //  SearchGeozon();
+                 SearchGeozon();
             }
 
             @Override

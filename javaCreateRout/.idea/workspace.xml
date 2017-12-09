@@ -18,22 +18,9 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="25" column="23" lean-forward="false" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+            <state relative-caret-position="433">
+              <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding>
-                <element signature="e#153#154#0" expanded="true" />
-                <element signature="e#179#180#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -41,22 +28,49 @@
       <file leaf-file-name="Session.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/wialon/core/Session.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-26">
-              <caret line="205" column="16" lean-forward="false" selection-start-line="205" selection-start-column="16" selection-end-line="205" selection-end-column="16" />
+            <state relative-caret-position="211">
+              <caret line="271" column="48" lean-forward="false" selection-start-line="271" selection-start-column="48" selection-end-line="271" selection-end-column="48" />
               <folding>
+                <element signature="e#2448#2449#0" expanded="true" />
+                <element signature="e#2470#2471#0" expanded="true" />
+                <element signature="e#2718#2719#0" expanded="true" />
+                <element signature="e#2736#2737#0" expanded="true" />
                 <element signature="e#6204#6205#0" expanded="true" />
                 <element signature="e#6244#6245#0" expanded="true" />
+                <element signature="e#7012#7013#0" expanded="true" />
+                <element signature="e#7066#7067#0" expanded="true" />
+                <element signature="e#15093#15094#0" expanded="true" />
+                <element signature="e#15116#15117#0" expanded="true" />
+                <element signature="e#15728#15729#0" expanded="true" />
+                <element signature="e#15749#15750#0" expanded="true" />
+                <element signature="e#35605#35621#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ResponseHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/wialon/remote/handlers/ResponseHandler.java">
+      <file leaf-file-name="RemoteHttpClient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/wialon/remote/RemoteHttpClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-              <folding />
+            <state relative-caret-position="169">
+              <caret line="246" column="0" lean-forward="false" selection-start-line="246" selection-start-column="0" selection-end-line="246" selection-end-column="0" />
+              <folding>
+                <element signature="e#5775#5791#0" expanded="true" />
+                <element signature="e#7522#7523#0" expanded="true" />
+                <element signature="e#7553#7554#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApacheSdkHttpClient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/wialon/remote/ApacheSdkHttpClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="195" column="0" lean-forward="false" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
+              <folding>
+                <element signature="e#5405#5420#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -69,6 +83,14 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>onLoginResult</find>
+      <find>onFailure</find>
+      <find>processStringAnswer</find>
+      <find>done</find>
+    </findStrings>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -94,7 +116,6 @@
         <option value="$PROJECT_DIR$/../../lib/gson/gson-2.8.1.jar!/com/google/gson/TypeAdapter.class" />
         <option value="$PROJECT_DIR$/../../lib/gson/gson-2.8.1.jar!/com/google/gson/JsonObject.class" />
         <option value="$PROJECT_DIR$/src/com/wialon/remote/OkSdkHttpClient.java" />
-        <option value="$PROJECT_DIR$/lib/gson/gson-2.8.1.jar!/com/google/gson/Gson.class" />
         <option value="$PROJECT_DIR$/lib/gson/gson-2.8.1.jar!/com/google/gson/internal/Streams.class" />
         <option value="$PROJECT_DIR$/lib/gson/gson-2.8.1.jar!/com/google/gson/stream/JsonWriter.class" />
         <option value="$PROJECT_DIR$/lib/gson/gson-2.8.1.jar!/com/google/gson/internal/bind/TypeAdapters.class" />
@@ -102,12 +123,13 @@
         <option value="$PROJECT_DIR$/src/com/wialon/remote/handlers/ResponseHandler.java" />
         <option value="$PROJECT_DIR$/src/com/company/test.java" />
         <option value="$PROJECT_DIR$/src/com/company/Test.java" />
-        <option value="$PROJECT_DIR$/src/com/wialon/core/Session.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/lib/gson/gson-2.8.1.jar!/com/google/gson/Gson.class" />
+        <option value="$PROJECT_DIR$/src/com/wialon/core/Session.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="6" />
     <option name="y" value="5" />
     <option name="width" value="1918" />
@@ -128,9 +150,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -233,7 +255,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="6" y="5" width="1918" height="1033" extended-state="0" />
+    <frame x="6" y="5" width="1918" height="1033" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17402734" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -244,7 +267,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32798165" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36580086" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36580086" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -272,12 +295,36 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/wialon/core/Session.java</url>
-          <line>270</line>
+          <line>256</line>
           <properties />
-          <option name="timeStamp" value="190" />
+          <option name="timeStamp" value="201" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/wialon/core/Session.java</url>
+          <line>252</line>
+          <properties />
+          <option name="timeStamp" value="203" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/Main.java</url>
+          <line>77</line>
+          <properties />
+          <option name="timeStamp" value="207" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/wialon/remote/RemoteHttpClient.java</url>
+          <line>79</line>
+          <properties />
+          <option name="timeStamp" value="210" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/wialon/remote/RemoteHttpClient.java</url>
+          <line>86</line>
+          <properties />
+          <option name="timeStamp" value="211" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="191" />
+      <option name="time" value="217" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -286,48 +333,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/wialon/remote/OkSdkHttpClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/wialon/core/Session.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="33" lean-forward="false" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
-          <folding>
-            <element signature="e#6204#6205#0" expanded="true" />
-            <element signature="e#6244#6245#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../../lib/wialon/wialon-sdk-1.3.57.jar!/com/wialon/remote/handlers/ResponseHandler.class" />
     <entry file="jar://$PROJECT_DIR$/../../lib/wialon/wialon-sdk-1.3.57.jar!/com/wialon/core/Session.class" />
     <entry file="jar://$PROJECT_DIR$/../../lib/wialon/wialon-sdk-1.3.57.jar!/com/wialon/remote/RemoteHttpClient.class" />
@@ -418,31 +423,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/wialon/remote/ApacheSdkHttpClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="188" column="0" lean-forward="false" selection-start-line="188" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/gson/gson-2.8.1.jar!/com/google/gson/internal/Streams.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/gson/gson-2.8.1.jar!/com/google/gson/Gson.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="408" column="0" lean-forward="false" selection-start-line="408" selection-start-column="0" selection-end-line="408" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/wialon/remote/RemoteHttpClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="184" column="0" lean-forward="false" selection-start-line="184" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -460,47 +444,133 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/wialon/remote/BaseSdkHttpClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
-            <element signature="e#153#154#0" expanded="true" />
-            <element signature="e#179#180#0" expanded="true" />
+            <element signature="e#153#154#0" expanded="false" />
+            <element signature="e#179#180#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/gson/gson-2.8.1.jar!/com/google/gson/Gson.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="408" column="0" lean-forward="false" selection-start-line="408" selection-start-column="0" selection-end-line="408" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/wialon/remote/BaseSdkHttpClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/httpcomponents-client-4.5.3/lib/httpclient-4.5.3.jar!/org/apache/http/client/methods/AbstractExecutionAwareRequest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/httpcomponents-client-4.5.3/lib/httpclient-4.5.3.jar!/org/apache/http/client/methods/HttpRequestBase.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/httpcomponents-client-4.5.3/lib/httpclient-4.5.3.jar!/org/apache/http/client/methods/HttpEntityEnclosingRequestBase.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/httpcomponents-client-4.5.3/lib/httpclient-4.5.3.jar!/org/apache/http/client/methods/HttpPost.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="e#413#414#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/httpcomponents-client-4.5.3/lib/httpcore-4.4.6.jar!/org/apache/http/message/BasicNameValuePair.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/wialon/remote/handlers/ResponseHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="212">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="e#831#832#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/wialon/remote/ApacheSdkHttpClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="195" column="0" lean-forward="false" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
+          <folding>
+            <element signature="e#5405#5420#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/wialon/remote/RemoteHttpClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="246" column="0" lean-forward="false" selection-start-line="246" selection-start-column="0" selection-end-line="246" selection-end-column="0" />
+          <folding>
+            <element signature="e#5775#5791#0" expanded="true" />
+            <element signature="e#7522#7523#0" expanded="true" />
+            <element signature="e#7553#7554#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="25" column="23" lean-forward="false" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+        <state relative-caret-position="433">
+          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/wialon/core/Session.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-26">
-          <caret line="205" column="16" lean-forward="false" selection-start-line="205" selection-start-column="16" selection-end-line="205" selection-end-column="16" />
+        <state relative-caret-position="211">
+          <caret line="271" column="48" lean-forward="false" selection-start-line="271" selection-start-column="48" selection-end-line="271" selection-end-column="48" />
           <folding>
+            <element signature="e#2448#2449#0" expanded="true" />
+            <element signature="e#2470#2471#0" expanded="true" />
+            <element signature="e#2718#2719#0" expanded="true" />
+            <element signature="e#2736#2737#0" expanded="true" />
             <element signature="e#6204#6205#0" expanded="true" />
             <element signature="e#6244#6245#0" expanded="true" />
+            <element signature="e#7012#7013#0" expanded="true" />
+            <element signature="e#7066#7067#0" expanded="true" />
+            <element signature="e#15093#15094#0" expanded="true" />
+            <element signature="e#15116#15117#0" expanded="true" />
+            <element signature="e#15728#15729#0" expanded="true" />
+            <element signature="e#15749#15750#0" expanded="true" />
+            <element signature="e#35605#35621#0" expanded="true" />
           </folding>
         </state>
       </provider>
