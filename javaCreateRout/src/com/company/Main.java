@@ -21,9 +21,9 @@ public class Main implements Runnable {
     // Login to server
     private void login(){
         // initialize Wialon session
-        session.initSession("http://hst-api.wialon.com");
+        session.initSession("http://wialon.biz");
         // trying login
-        session.loginToken("9c637b0df7f3b5d66967b3c53ff30ebaC3721467CC0BE2E5E134FF85C2F901197A333149", new ResponseHandler() {
+        session.loginToken("1be3b9a29e2159e9a58bc5376d06f43e21B79E72E40F86B0418B49543353FC111D9B0BCC", new ResponseHandler() {
             @Override
             public void onSuccess(String response) {
                 super.onSuccess(response);
