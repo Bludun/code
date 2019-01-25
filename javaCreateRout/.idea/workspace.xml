@@ -17,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="77" selection-start-line="77" selection-end-line="77" />
+            <state relative-caret-position="329">
+              <caret line="74" column="48" lean-forward="true" selection-start-line="74" selection-start-column="48" selection-end-line="74" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -36,7 +36,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/wialon/core/Session.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="277" selection-start-line="277" selection-end-line="277" />
+              <caret line="277" column="50" lean-forward="true" selection-start-line="277" selection-start-column="35" selection-end-line="277" selection-end-column="50" />
               <folding>
                 <element signature="e#2448#2449#0" expanded="true" />
                 <element signature="e#2470#2471#0" expanded="true" />
@@ -133,7 +133,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="width" value="1565" />
     <option name="height" value="1040" />
   </component>
@@ -249,7 +249,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3270925" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3623348" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3623348" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -488,7 +488,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/wialon/core/Session.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="277" selection-start-line="277" selection-end-line="277" />
+          <caret line="277" column="50" lean-forward="true" selection-start-line="277" selection-start-column="35" selection-end-line="277" selection-end-column="50" />
           <folding>
             <element signature="e#2448#2449#0" expanded="true" />
             <element signature="e#2470#2471#0" expanded="true" />
@@ -510,8 +510,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
+        <state relative-caret-position="329">
+          <caret line="74" column="48" lean-forward="true" selection-start-line="74" selection-start-column="48" selection-end-line="74" selection-end-column="48" />
         </state>
       </provider>
     </entry>
