@@ -23,7 +23,7 @@ public class Main implements Runnable {
         // initialize Wialon session
         session.initSession("http://wialon.biz");
         // trying login
-        session.loginToken("1be3b9a29e2159e9a58bc5376d06f43e21B79E72E40F86B0418B49543353FC111D9B0BCC", new ResponseHandler() {
+        session.loginToken("1be3b9a29e2159e9a58bc5376d06f43e8A294D030AE4768E85B74D5867ECE26D648EBB54", new ResponseHandler() {
             @Override
             public void onSuccess(String response) {
                 super.onSuccess(response);

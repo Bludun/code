@@ -269,7 +269,7 @@ svc=resource/get_zone_data&params={"itemId":<long>,
 	public void SearchGeozon (ResponseHandler callback) {
 
 		JsonObject params=new JsonObject();
-		params.addProperty("itemId", "1512812828");
+		params.addProperty("itemId", "61");
 		params.addProperty("flags", "[1]");
 		//{"color":<uint>,"descr":<text>,"units":[<long>]}
 
