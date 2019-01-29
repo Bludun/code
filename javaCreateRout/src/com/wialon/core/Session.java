@@ -267,6 +267,14 @@ svc=resource/get_zone_data&params={"itemId":<long>,
  */
 
 	public void SearchGeozon (ResponseHandler callback) {
+//____________________Получение списка геозон
+		//***********************************************************************
+		/*
+		svc=resource/get_zone_data&params={"itemId":<long>,
+		"col":[<long>],
+		"flags":<uint>}
+		*/
+		//***********************************************************************
 
 		JsonObject params=new JsonObject();
 		params.addProperty("itemId", "61");
@@ -277,6 +285,44 @@ svc=resource/get_zone_data&params={"itemId":<long>,
 
 		httpClient.remoteCall("resource/get_zone_data", params, new ResponseHandler(callback) {
 		});;
+
+	}
+
+
+
+
+
+	public void CreateGroupGeozon (ResponseHandler callback) {
+
+//___________________Получение группы геозон resource/update_zones_group:
+		//**********************************************************************
+		/*svc=resource/update_zones_group&params={"itemId":<long>,      //id ресурса
+		"id":<long>,													//if группы
+		"callMode":<text>,
+				"n":<text>,    //название
+				"d":<text>,    //описание
+				"zns":[<uint>],  //массив ID геозон
+		"f":<uint>}*/
+		//
+		//*******params	{"id":1,"n":"group 1","d":"","zns":[1,2],"f":2,"itemId":61,"callMode":"update"}
+		//***********************************************************************
+
+		JsonObject params=new JsonObject();
+
+		params.addProperty("itemId", 61);
+		params.addProperty("id", 5);
+		params.addProperty("n", "group 5");
+		params.addProperty("d", "привет");
+		JsonArray zns = new JsonArray();
+		zns.add(1);
+		params.add("zns",zns);
+		params.addProperty("f", "2");
+		params.addProperty("callMode", "create");   //create   delete
+
+
+		httpClient.remoteCall("resource/update_zones_group&params", params, new ResponseHandler(callback) {
+		});;
+
 	}
 
 //Бла бла бла
