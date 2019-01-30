@@ -74,10 +74,24 @@ public class Main implements Runnable {
             @Override
             public void onSuccess(String response) {
 
+                session.CreateGroupGeozon(new ResponseHandler()
+                {
+                    @Override
+                    public void onSuccess(String response) {
+                        super.onSuccess(response);
+                        // login succeed
+                        System.out.println(String.format("Попытка не пытка 222"));
+
+                    }
+
+                }, response);
+
 
                 super.onSuccess(response);
                 // login succeed
                 System.out.println(String.format("Попытка не пытка"));
+
+                //CreateGroupGeozon
                 //call search units
 
                 // searchUnits();

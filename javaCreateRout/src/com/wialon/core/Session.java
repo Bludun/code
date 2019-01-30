@@ -292,7 +292,7 @@ svc=resource/get_zone_data&params={"itemId":<long>,
 
 
 
-	public void CreateGroupGeozon (ResponseHandler callback) {
+	public void CreateGroupGeozon (ResponseHandler callback, String buffer) {
 
 //___________________Получение группы геозон resource/update_zones_group:
 		//**********************************************************************
@@ -306,6 +306,31 @@ svc=resource/get_zone_data&params={"itemId":<long>,
 		//
 		//*******params	{"id":1,"n":"group 1","d":"","zns":[1,2],"f":2,"itemId":61,"callMode":"update"}
 		//***********************************************************************
+		buffer.length();
+		List<String> ArrStr = new ArrayList<String>();
+		String[]lines=buffer.split("\\p{Ps}");
+		//проходим каждую подстроку
+		for (String line : lines){
+
+			//Проверяем, начинается ли адрес с "id"
+			boolean isid = line.startsWith("\"id\"");
+
+			if(isid){
+				int pos = line.indexOf(",");			//находим индекс первого вхождения символа "," в подстроке
+				String value = line.substring(5,pos);
+				ArrStr.add(value);
+				value.length();
+
+			}else{
+			}
+		}
+
+
+		JsonArray zns = new JsonArray();
+
+		for(int i=0;i<ArrStr.size();i++) {
+			zns.add(ArrStr.get(i));
+		}
 
 		JsonObject params=new JsonObject();
 
@@ -313,8 +338,7 @@ svc=resource/get_zone_data&params={"itemId":<long>,
 		params.addProperty("id", 5);
 		params.addProperty("n", "group 5");
 		params.addProperty("d", "привет");
-		JsonArray zns = new JsonArray();
-		zns.add(1);
+
 		params.add("zns",zns);
 		params.addProperty("f", "2");
 		params.addProperty("callMode", "create");   //create   delete
