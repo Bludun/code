@@ -31,11 +31,15 @@ import java.lang.reflect.Type;
 import java.util.*;
 import java.util.concurrent.*;
 
+import com.company.cListGroupGeo;
+import com.company.cGeoZones;
+
 /**
  * Wialon session static object.
  * Contain all information about active Wialon server session.
  */
 public class Session extends EventProvider {
+
 	private static final Session instance = new Session();
 	/** base URL for Wialon server*/
 	private String baseUrl;
@@ -92,7 +96,11 @@ public class Session extends EventProvider {
 	public Gson getGson(){
 		return gson;
 	}
+//******************************************************************************************************
 
+	public ArrayList<cListGroupGeo>  ListGroupGeo= new ArrayList<>();
+
+//******************************************************************************************************
 	/**
 	 * Get item com ID
 	 * @param itemId {Integer} Item ID
@@ -306,9 +314,15 @@ svc=resource/get_zone_data&params={"itemId":<long>,
 		//
 		//*******params	{"id":1,"n":"group 1","d":"","zns":[1,2],"f":2,"itemId":61,"callMode":"update"}
 		//***********************************************************************
+		//cListGroupGeo group1 = new cListGroupGeo();
+		//group1.nameGroup = "650";
+
+		//ListGroupGeo.add(group1);
+
+
 		buffer.length();
 		List<String> ArrStr = new ArrayList<String>();
-		String[]lines=buffer.split("\\p{Ps}");
+		String[]lines=buffer.split("\\{");
 		//проходим каждую подстроку
 		for (String line : lines){
 
@@ -319,6 +333,33 @@ svc=resource/get_zone_data&params={"itemId":<long>,
 				int pos = line.indexOf(",");			//находим индекс первого вхождения символа "," в подстроке
 				String value = line.substring(5,pos);
 				ArrStr.add(value);
+
+				int posOff1 = line.indexOf(")\",\"d\":\"");
+				int posOff2 = line.lastIndexOf("/",posOff1);
+				int posOff = line.lastIndexOf("/",posOff2);
+
+				//int posOff = line.indexOf("/"); //находим индекс первого вхождения символа "/" в подстроке
+				int posOn = line.lastIndexOf("(",posOff);
+				String valueGroup = line.substring(posOn+1,posOff-3);  //Получаем имя группы геозоны
+
+				if(ListGroupGeo.size()==0) {
+					ListGroupGeo.add(new cListGroupGeo(valueGroup));
+					ListGroupGeo.get(0).ListGeoZones.add(new cGeoZones("asdasd", value));
+				}
+				else {
+					for (int i = 0; i < ListGroupGeo.size(); i++) {                    //проверяем есть ли такая групп
+						if (ListGroupGeo.get(i).nameGroup.equals(valueGroup)) {
+							int j = 0;
+							ListGroupGeo.get(i).ListGeoZones.add(new cGeoZones("asdasd", value));
+							break;
+						}
+						if (i == ListGroupGeo.size()-1) {
+							ListGroupGeo.add(new cListGroupGeo(valueGroup));
+							ListGroupGeo.get(ListGroupGeo.size()-1).ListGeoZones.add(new cGeoZones("asdasd", value));
+						}
+					}
+				}
+
 				value.length();
 
 			}else{
@@ -326,27 +367,33 @@ svc=resource/get_zone_data&params={"itemId":<long>,
 		}
 
 
-		JsonArray zns = new JsonArray();
 
-		for(int i=0;i<ArrStr.size();i++) {
-			zns.add(ArrStr.get(i));
+
+		for(int j = 0; j<ListGroupGeo.size();j++) {
+
+
+			JsonArray zns = new JsonArray();
+
+			for (int i = 0; i < ListGroupGeo.get(j).ListGeoZones.size(); i++) {
+				zns.add(ListGroupGeo.get(j).ListGeoZones.get(i).id);
+			}
+
+			JsonObject params = new JsonObject();
+
+			params.addProperty("itemId", 61);
+			params.addProperty("id", 5);
+			params.addProperty("n", ListGroupGeo.get(j).nameGroup);
+			params.addProperty("d", "привет");
+
+			params.add("zns", zns);
+			params.addProperty("f", "2");
+			params.addProperty("callMode", "create");   //create   delete
+
+
+			httpClient.remoteCall("resource/update_zones_group&params", params, new ResponseHandler(callback) {
+			});
+
 		}
-
-		JsonObject params=new JsonObject();
-
-		params.addProperty("itemId", 61);
-		params.addProperty("id", 5);
-		params.addProperty("n", "group 5");
-		params.addProperty("d", "привет");
-
-		params.add("zns",zns);
-		params.addProperty("f", "2");
-		params.addProperty("callMode", "create");   //create   delete
-
-
-		httpClient.remoteCall("resource/update_zones_group&params", params, new ResponseHandler(callback) {
-		});;
-
 	}
 
 //Бла бла бла
