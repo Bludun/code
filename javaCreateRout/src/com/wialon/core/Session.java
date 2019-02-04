@@ -336,30 +336,54 @@ svc=resource/get_zone_data&params={"itemId":<long>,
 
 				int posOff1 = line.indexOf(")\",\"d\":\"");
 				int posOff2 = line.lastIndexOf("/",posOff1);
-				int posOff = line.lastIndexOf("/",posOff2);
+				int posOff = line.lastIndexOf("/",posOff2-1);
 
 				//int posOff = line.indexOf("/"); //находим индекс первого вхождения символа "/" в подстроке
 				int posOn = line.lastIndexOf("(",posOff);
-				String valueGroup = line.substring(posOn+1,posOff-3);  //Получаем имя группы геозоны
+				String valueGroup = line.substring(posOn+1,posOff-1);  //Получаем имя группы геозоны
 
-				if(ListGroupGeo.size()==0) {
-					ListGroupGeo.add(new cListGroupGeo(valueGroup));
-					ListGroupGeo.get(0).ListGeoZones.add(new cGeoZones("asdasd", value));
-				}
-				else {
-					for (int i = 0; i < ListGroupGeo.size(); i++) {                    //проверяем есть ли такая групп
-						if (ListGroupGeo.get(i).nameGroup.equals(valueGroup)) {
-							int j = 0;
-							ListGroupGeo.get(i).ListGeoZones.add(new cGeoZones("asdasd", value));
-							break;
-						}
-						if (i == ListGroupGeo.size()-1) {
-							ListGroupGeo.add(new cListGroupGeo(valueGroup));
-							ListGroupGeo.get(ListGroupGeo.size()-1).ListGeoZones.add(new cGeoZones("asdasd", value));
+				//Если геозона есть в нескольких днях то
+				if(valueGroup.indexOf("*")!=-1){
+					String[]linesStar=valueGroup.split("\\*");
+					for (String lnNum : linesStar){
+						if (ListGroupGeo.size() == 0) {
+							ListGroupGeo.add(new cListGroupGeo(lnNum));
+							ListGroupGeo.get(0).ListGeoZones.add(new cGeoZones("asdasd", value));
+						} else {
+							for (int i = 0; i < ListGroupGeo.size(); i++) {                    //проверяем есть ли такая групп
+								if (ListGroupGeo.get(i).nameGroup.equals(lnNum)) {
+									ListGroupGeo.get(i).ListGeoZones.add(new cGeoZones("asdasd", value));
+									break;
+								}
+								if (i == ListGroupGeo.size() - 1) {
+									ListGroupGeo.add(new cListGroupGeo(lnNum));
+									ListGroupGeo.get(ListGroupGeo.size() - 1).ListGeoZones.add(new cGeoZones("asdasd", value));
+									break;
+								}
+							}
 						}
 					}
 				}
+				//Если геозона только в одном дне
+				else {
 
+					if (ListGroupGeo.size() == 0) {
+						ListGroupGeo.add(new cListGroupGeo(valueGroup));
+						ListGroupGeo.get(0).ListGeoZones.add(new cGeoZones("asdasd", value));
+					} else {
+						for (int i = 0; i < ListGroupGeo.size(); i++) {                    //проверяем есть ли такая групп
+							if (ListGroupGeo.get(i).nameGroup.equals(valueGroup)) {
+								ListGroupGeo.get(i).ListGeoZones.add(new cGeoZones("asdasd", value));
+								break;
+							}
+							if (i == ListGroupGeo.size() - 1) {
+								ListGroupGeo.add(new cListGroupGeo(valueGroup));
+								ListGroupGeo.get(ListGroupGeo.size() - 1).ListGeoZones.add(new cGeoZones("asdasd", value));
+								break;
+							}
+						}
+					}
+				}
 				value.length();
 
 			}else{
