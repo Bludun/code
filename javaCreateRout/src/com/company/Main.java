@@ -31,9 +31,9 @@ public class Main implements Runnable {
                 System.out.println(String.format("Logged successfully. User name is %s", session.getCurrUser().getName()));
                 //call search units
 
-                //searchUnits();
+                searchUnits();
                // CreateRout();
-                 SearchGeozon();
+                // SearchGeozon();
             }
 
             @Override
@@ -110,10 +110,28 @@ public class Main implements Runnable {
     }
 
     private void searchUnits(){
+/*
+        https://hst-api.wialon.com/wialon/ajax.html?svc=core/search_items&
+        params={
+                "spec":{
+            "itemsType":"user",
+                    "propName":"sys_name",
+                    "propValueMask":"*",
+                    "sortType":"sys_name"
+        },
+        "force":1,
+                "flags":1,
+                "from":0,
+                "to":0
+	}&sid=<your_sid>
+
+
+        */
+
         //Create new search specification
         SearchSpec searchSpec=new SearchSpec();
         //Set items type to search avl_units
-        searchSpec.setItemsType(Item.ItemType.avl_unit);
+        searchSpec.setItemsType(Item.ItemType.avl_resource);
         //Set property name to search
         searchSpec.setPropName("sys_name");
         //Set property value mask to search all units

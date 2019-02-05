@@ -34,6 +34,7 @@ import java.util.concurrent.*;
 import com.company.cListGroupGeo;
 import com.company.cGeoZones;
 
+
 /**
  * Wialon session static object.
  * Contain all information about active Wialon server session.
@@ -283,6 +284,8 @@ svc=resource/get_zone_data&params={"itemId":<long>,
 		"flags":<uint>}
 		*/
 		//***********************************************************************
+		//-----------------------------
+
 
 		JsonObject params=new JsonObject();
 		params.addProperty("itemId", "61");
@@ -295,6 +298,59 @@ svc=resource/get_zone_data&params={"itemId":<long>,
 		});;
 
 	}
+/*
+
+	public void Search_items (ResponseHandler callback) {
+
+		//---------------супер поиск
+	https://hst-api.wialon.com/wialon/ajax.html?svc=core/search_items&
+		params={
+				"spec":{
+			"itemsType":"user",
+					"propName":"sys_name",
+					"propValueMask":"*",
+					"sortType":"sys_name"
+		},
+		"force":1,
+				"flags":1,
+				"from":0,
+				"to":0
+	}&sid=<your_sid>
+
+		//Create new search specification
+		SearchSpec searchSpec=new SearchSpec();
+		//Set items type to search avl_units
+		searchSpec.setItemsType(Item.ItemType.avl_unit);
+		//Set property name to search
+		searchSpec.setPropName("sys_name");
+		//Set property value mask to search all units
+		searchSpec.setPropValueMask("*");
+		//Set sort type by units name
+		searchSpec.setSortType("sys_name");
+
+
+
+		JsonObject params = new JsonObject();
+		params.addProperty("itemId", "61");
+		params.addProperty("flags", "[1]");
+		//{"color":<uint>,"descr":<text>,"units":[<long>]}
+
+		// callback.onSuccess("dfgdfg");
+
+
+
+		//Send search by created search specification with items base data flag and from 0 to maximum number
+
+
+
+
+
+
+				httpClient.remoteCall("core/search_items", params, new ResponseHandler(callback) {
+		});
+
+	}
+*/
 
 
 
