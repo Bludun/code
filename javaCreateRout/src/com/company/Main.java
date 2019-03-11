@@ -23,7 +23,7 @@ public class Main implements Runnable {
         // initialize Wialon session
         session.initSession("http://wialon.biz");
         // trying login
-        session.loginToken("1be3b9a29e2159e9a58bc5376d06f43e8A294D030AE4768E85B74D5867ECE26D648EBB54", new ResponseHandler() {
+        session.loginToken("1be3b9a29e2159e9a58bc5376d06f43e49E553A8C3F560838DF9EC994B2CFDD26D198641", new ResponseHandler() {
             @Override
             public void onSuccess(String response) {
                 super.onSuccess(response);
@@ -48,7 +48,7 @@ public class Main implements Runnable {
 
 
     private void CreateRout(){
-        session.CreateRoute("5b5123165acf4d486bb53e51f1d518100B8AB23328FF09EB913C63F98D61EE62FE79684A ", new ResponseHandler(){
+        session.CreateRoute("1be3b9a29e2159e9a58bc5376d06f43e49E553A8C3F560838DF9EC994B2CFDD26D198641", new ResponseHandler(){
             @Override
             public void onSuccess(String response) {
                 super.onSuccess(response);
@@ -141,7 +141,7 @@ public class Main implements Runnable {
 
 
         //Send search by created search specification with items base data flag and from 0 to maximum number
-        session.searchItems(searchSpec, 1, Item.dataFlag.base.getValue(), 0, Integer.MAX_VALUE, new SearchResponseHandler() {
+        session.searchItems(searchSpec, 1, Item.dataFlag.groupGeo.getValue(), 0, Integer.MAX_VALUE, new SearchResponseHandler() {
             @Override
             public void onSuccessSearch(Item... items) {
                 super.onSuccessSearch(items);
@@ -156,6 +156,13 @@ public class Main implements Runnable {
                 // search item failed, print error
                 System.out.println(Errors.getErrorText(errorCode));
                 logout();
+            }
+            @Override
+            public void onSuccess(String response) {
+                super.onSuccess(response);
+                // logout succeed
+                System.out.println("Logout successfully");
+                System.exit(0);
             }
         });
     }

@@ -403,6 +403,9 @@ public abstract class Item extends EventProvider {
 		/** Item billing/construction properties */
 		billingProps(0x00000004),
 		/** Custom fields plugin */
+
+		groupGeo(0x00100001),
+
 		customFields(0x00000008),
 		/** Item image */
 		image(0x00000010),

@@ -289,6 +289,7 @@ svc=resource/get_zone_data&params={"itemId":<long>,
 
 		JsonObject params=new JsonObject();
 		params.addProperty("itemId", "61");
+
 		params.addProperty("flags", "[1]");
 		//{"color":<uint>,"descr":<text>,"units":[<long>]}
 
