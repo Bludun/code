@@ -279,8 +279,8 @@ svc=resource/get_zone_data&params={"itemId":<long>,
 	//------------------------------------------------------------------------------------------------------------
 	//******************************************Выгрузка сообщений***********************************************
 	//------------------------------------------------------------------------------------------------------------
-	public void ImportMassage (String token, ResponseHandler callback){
-		ImportMassage(token, null, callback);
+	public void ImportMassage (ResponseHandler callback){
+		ImportMassage( callback);
 	}
 
 
@@ -296,12 +296,12 @@ svc=resource/get_zone_data&params={"itemId":<long>,
 	public void ImportMassage (String token, String service, ResponseHandler callback) {
 
 		JsonObject params=new JsonObject();
-		params.addProperty("itemId", "15584000");     //"itemId":<long>,
-		params.addProperty("timeFrom", "23456");             //"timeFrom":<uint>,
-		params.addProperty("timeTo", "1");            //"timeTo":<uint>,
+		params.addProperty("itemId", "34868");     //"itemId":<long>,
+		params.addProperty("timeFrom", "1364760000");             //"timeFrom":<uint>,
+		params.addProperty("timeTo", "1366487999");            //"timeTo":<uint>,
 		params.addProperty("flags", "1");			//"flags":<uint>,
-		params.addProperty("flagsMask", "1");			//"flagsMask":<uint>,
-		params.addProperty("loadCount", "1");			//"loadCount":<uint>}
+		params.addProperty("flagsMask", "65281");			//"flagsMask":<uint>,
+		params.addProperty("loadCount", "3");			//"loadCount":<uint>}
 
 
 

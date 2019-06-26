@@ -32,8 +32,8 @@ public class Main implements Runnable {
                 //call search units
 
                 //searchUnits();
-                searchObject();
-                ImportMassage();
+                ExportTreck();
+
                // CreateRout();
                 // SearchGeozon();
             }
@@ -48,24 +48,24 @@ public class Main implements Runnable {
 
     }
 
-    private void searchObject(){
-/*
-        https://hst-api.wialon.com/wialon/ajax.html?svc=core/search_items&
-        params={
-                "spec":{
-            "itemsType":"user",
-                    "propName":"sys_name",
-                    "propValueMask":"*",
-                    "sortType":"sys_name"
-        },
-        "force":1,
-                "flags":1,
-                "from":0,
-                "to":0
-	}&sid=<your_sid>
 
+    /**
+     https://hst-api.wialon.com/wialon/ajax.html?svc=core/search_items&
+     params={
+     "spec":{
+     "itemsType":"user",
+     "propName":"sys_name",
+     "propValueMask":"*",
+     "sortType":"sys_name"
+     },
+     "force":1,
+     "flags":1,
+     "from":0,
+     "to":0
+     }&sid=<your_sid>
+     */
 
-        */
+    private void ExportTreck(){
 
         //Create new search specification
         SearchSpec searchSpec=new SearchSpec();
@@ -99,17 +99,25 @@ public class Main implements Runnable {
             @Override
             public void onSuccess(String response) {
 
-                session.CreateGroupGeozon(new ResponseHandler()
-                {
+                session.ImportMassage( new ResponseHandler(){
                     @Override
                     public void onSuccess(String response) {
                         super.onSuccess(response);
                         // login succeed
-                        System.out.println(String.format("Попытка не пытка 222"));
+                        System.out.println(String.format(response));
+                        //call search units
 
+                        // searchUnits();
+                        logout();
                     }
 
-                }, response);
+                    @Override
+                    public void onFailure(int errorCode, Throwable throwableError) {
+                        super.onFailure(errorCode, throwableError);
+                        // login failed, print error
+                        System.out.println(Errors.getErrorText(errorCode));
+                    }
+                });
 
 
 
@@ -124,27 +132,6 @@ public class Main implements Runnable {
     }
 
 
-    private void ImportMassage(){
-        session.ImportMassage("1be3b9a29e2159e9a58bc5376d06f43e49E553A8C3F560838DF9EC994B2CFDD26D198641", new ResponseHandler(){
-            @Override
-            public void onSuccess(String response) {
-                super.onSuccess(response);
-                // login succeed
-                System.out.println(String.format(response));
-                //call search units
-
-                // searchUnits();
-                logout();
-            }
-
-            @Override
-            public void onFailure(int errorCode, Throwable throwableError) {
-                super.onFailure(errorCode, throwableError);
-                // login failed, print error
-                System.out.println(Errors.getErrorText(errorCode));
-            }
-        });
-    }
 
 
 
