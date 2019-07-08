@@ -33,7 +33,7 @@ import java.util.concurrent.*;
 
 import com.company.cListGroupGeo;
 import com.company.cGeoZones;
-
+//import com.wialon.remote.handlers.MessagesResponseHandler;
 
 /**
  * Wialon session static object.
@@ -303,15 +303,25 @@ svc=resource/get_zone_data&params={"itemId":<long>,
 		params.addProperty("flagsMask", "65281");			//"flagsMask":<uint>,
 		params.addProperty("loadCount", "3");			//"loadCount":<uint>}
 
-
-
-		httpClient.remoteCall("messages/load_interval", params, new ResponseHandler(callback) {
+/*
+		messagesLoader.loadInterval(34868, 1364760000, 1366487999, 1, 65281, 3, new MessagesResponseHandler(callback) {
 			@Override
 			public void onSuccess(String response) {
 				//onLoginResult(response, this.getCallback());
 				callback.onSuccess(response);
 			}
 		});
+		*/
+
+
+
+		/*httpClient.remoteCall("messages/load_interval", params, new ResponseHandler(callback) {
+			@Override
+			public void onSuccess(String response) {
+				//onLoginResult(response, this.getCallback());
+				callback.onSuccess(response);
+			}
+		});*/
 	}
 
 

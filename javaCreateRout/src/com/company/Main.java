@@ -12,6 +12,8 @@ import com.wialon.core.Errors;
 import com.wialon.core.Session;
 import com.wialon.extra.SearchSpec;
 import com.wialon.item.Item;
+import com.wialon.messages.Message;
+import com.wialon.remote.handlers.MessagesResponseHandler;
 import com.wialon.remote.handlers.ResponseHandler;
 import com.wialon.remote.handlers.SearchResponseHandler;
 
@@ -99,6 +101,28 @@ public class Main implements Runnable {
             @Override
             public void onSuccess(String response) {
 
+
+                session.getMessagesLoader().loadInterval(34868, 1364760000, 1366487999, 1, 65281, 3, new MessagesResponseHandler() {
+                   /* @Override
+                    public void onSuccess(String response) {
+                        //onLoginResult(response, this.getCallback());
+                        callback.onSuccess(response);
+                    }*/
+
+                    @Override
+                    public void onSuccessMessages(Message... messages) {
+                        //onLoginResult(response, this.getCallback());
+                        callback.onSuccess(response);
+                    }
+
+
+                });
+
+
+
+
+
+/*
                 session.ImportMassage( new ResponseHandler(){
                     @Override
                     public void onSuccess(String response) {
@@ -119,7 +143,7 @@ public class Main implements Runnable {
                     }
                 });
 
-
+*/
 
 
 
