@@ -276,55 +276,6 @@ svc=resource/get_zone_data&params={"itemId":<long>,
  */
 
 
-	//------------------------------------------------------------------------------------------------------------
-	//******************************************Выгрузка сообщений***********************************************
-	//------------------------------------------------------------------------------------------------------------
-	public void ImportMassage (ResponseHandler callback){
-		ImportMassage( callback);
-	}
-
-
-	//svc=messages/load_interval&params={"itemId":<long>,
-	//	"timeFrom":<uint>,
-	//			"timeTo":<uint>,
-	//			"flags":<uint>,
-	//			"flagsMask":<uint>,
-	//			"loadCount":<uint>}
-
-
-
-	public void ImportMassage (String token, String service, ResponseHandler callback) {
-
-		JsonObject params=new JsonObject();
-		params.addProperty("itemId", "34868");     //"itemId":<long>,
-		params.addProperty("timeFrom", "1364760000");             //"timeFrom":<uint>,
-		params.addProperty("timeTo", "1366487999");            //"timeTo":<uint>,
-		params.addProperty("flags", "1");			//"flags":<uint>,
-		params.addProperty("flagsMask", "65281");			//"flagsMask":<uint>,
-		params.addProperty("loadCount", "3");			//"loadCount":<uint>}
-
-/*
-		messagesLoader.loadInterval(34868, 1364760000, 1366487999, 1, 65281, 3, new MessagesResponseHandler(callback) {
-			@Override
-			public void onSuccess(String response) {
-				//onLoginResult(response, this.getCallback());
-				callback.onSuccess(response);
-			}
-		});
-		*/
-
-
-
-		/*httpClient.remoteCall("messages/load_interval", params, new ResponseHandler(callback) {
-			@Override
-			public void onSuccess(String response) {
-				//onLoginResult(response, this.getCallback());
-				callback.onSuccess(response);
-			}
-		});*/
-	}
-
-
 
 
 	public void SearchGeozon (ResponseHandler callback) {

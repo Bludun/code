@@ -25,7 +25,7 @@ public class Main implements Runnable {
         // initialize Wialon session
         session.initSession("http://wialon.biz");
         // trying login
-        session.loginToken("2c80e39f3f7285ed958c02aa20368c5435787DFD720037D82423C3152BF751A2407AC05A", new ResponseHandler() {
+        session.loginToken("1be3b9a29e2159e9a58bc5376d06f43e0241109FAA30792A911DA9AFF735CED73101DEC0", new ResponseHandler() {
             @Override
             public void onSuccess(String response) {
                 super.onSuccess(response);
@@ -102,7 +102,7 @@ public class Main implements Runnable {
             public void onSuccess(String response) {
 
 
-                session.getMessagesLoader().loadInterval(34868, 1364760000, 1366487999, 1, 65281, 3, new MessagesResponseHandler() {
+                session.getMessagesLoader().loadInterval(397, 1364760000, 1366487999, 1, 65281, 3, new MessagesResponseHandler() {
                    /* @Override
                     public void onSuccess(String response) {
                         //onLoginResult(response, this.getCallback());
